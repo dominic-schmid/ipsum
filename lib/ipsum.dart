@@ -3,16 +3,20 @@ library ipsum;
 import 'dart:io';
 import 'dart:convert';
 import 'dart:math';
+import 'package:ipsum/definibus.dart';
 
 /// A helper class for the lorem ipsum generation.
-/// It reads lines from a [file] and randomly selects the needed output from it.
+/// It reads lines from a constant of [De finibus bonorum et malorum](https://en.wikipedia.org/wiki/De_finibus_bonorum_et_malorum).
+///
+/// If you pass a [file], it will randomly select the output from it.
+///
+/// You can also provide an [encoding] which will be used when opening the file for the initial read
 ///
 /// You can set whether or not the first words should be `Lorem ipsum dolor sit amet` with [startWithLorem]
 ///
 /// By default, sentences and paragraphs are delimited with `{".", "?", "!"}`. Change these with [sentenceDelimiters]
-///
-/// You can also provide an [encoding] which will be used when opening the file for the initial read
 class Ipsum {
+  ///  ```["Lorem", "ipsum", "dolor", "sit", "amet"]```
   final List<String> _lorem = ["Lorem", "ipsum", "dolor", "sit", "amet"];
 
   /// Contains all the lines read from the [file] on creation of the [Ipsum] object
@@ -35,9 +39,12 @@ class Ipsum {
   }) {
     this.sentenceDelimiters = sentenceDelimiters ?? {".", "?", "!"};
 
-    /// Reads the given number of words from the specified open file.
-    file ??= File.fromUri(Uri.parse('package:ipsum/lib/assets/definibus.txt'));
-    _lines = file.readAsLinesSync(encoding: encoding).map((e) => e.trim());
+    /// Reads the given number of words from the specified open file or the [definibus] string.
+    if (file == null) {
+      _lines = definibus.split('\n').map((e) => e.trim());
+    } else {
+      _lines = file.readAsLinesSync(encoding: encoding).map((e) => e.trim());
+    }
   }
 
   /// Prepares and cleans up the given string

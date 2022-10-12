@@ -1,8 +1,6 @@
 name: ipsum
 description: A simple lorem ipsum text generator for dart based off of the lipsum library for Python.
-authors:
-  - Dominic Schmid <dominic.schmid@hotmail.com>
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/dominic-schmid/ipsum
 
 environment:

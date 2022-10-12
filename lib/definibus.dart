@@ -1,4 +1,8 @@
-Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractavissent, ea
+/// This constant contains `1000 lines` of text
+///
+///  It has its source in [De finibus bonorum et malorum](https://en.wikipedia.org/wiki/De_finibus_bonorum_et_malorum)
+const definibus =
+    """Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractavissent, ea
 Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. nam quibusdam, et iis quidem
 non admodum indoctis, totum hoc displicet philosophari. quidam autem non tam id reprehendunt, si remissius agatur, sed
 tantum studium tamque multam operam ponendam in eo non arbitrantur. erunt etiam, et ii quidem eruditi Graecis litteris,
@@ -1857,4 +1861,4 @@ constringatur, animo tamen vincula inici nulla possint, nec expectet ullum tempu
 iudicetur beatusne fuerit, cum extremum vitae diem morte confecerit, quod ille unus e septem sapientibus non sapienter
 Croesum monuit; nam si beatus umquam fuisset, beatam vitam usque ad illum a Cyro extructum rogum pertulisset. quod si
 ita est, ut neque quisquam nisi bonus vir et omnes boni beati sint, quid philosophia magis colendum aut quid est virtute
-divinius?
+divinius?""";
